@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html
+  class="light"
+  lang="en"
+  th:fragment="parent(content, title)"
+  xmlns:th="http://www.thymeleaf.org"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <title th:replace="${title}">Base Page</title>
+    <link rel="stylesheet" th:href="@{/css/output.css}" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700"
+      rel="stylesheet"
+    />
+    
+  </head>
+  <body class="dark:bg-gray-900 bg-gray-100 dark:text-white">
+    <!-- Common Navbar -->
+
+    <!-- jab user login hoga tab ye navbar dikhega -->
+
+    <div th:if="${logedInUser}">
+      <div th:replace="user/user_navbar::user-navbar"></div>
+    </div>
+
+    <!-- jab user login nhi hoga tab ye navbar dikhega -->
+
+    <div th:unless="${logedInUser}">
+      <div th:replace="navbar::navbar"></div>
+    </div>
+
+    <!-- Content Section -->
+    <div>
+      <section th:replace="${content}"></section>
+    </div>
+    <!-- Common Footer -->
+    <!-- <footer>This is common footer</footer> -->
+
+<!-- footer end -->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script th:src="@{'/js/script.js'}"></script>
+    <script th:src="@{'/js/admin.js'}"></script>
+    <script th:src="@{'/js/contacts.js'}"></script>
+  </body>
+</html>

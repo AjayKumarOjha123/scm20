@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{base :: parent(~{:: #content},~{::title})}">
+  <head>
+    <title>Home Page</title>
+  </head>
+  <body
+    class="text-gray-700 bg-white"
+    style="font-family: 'Source Sans Pro', sans-serif"
+  >
+    <section id="content">
+      <!-- hero section -->
+      <section class="bg-white dark:bg-gray-900 pt-16">
+        <div
+          class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12"
+        >
+          <div class="mr-auto place-self-center lg:col-span-7">
+            <h1
+              class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white"
+            >
+              Welcome To Smart Contact Manager
+            </h1>
+            <p
+              class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400"
+            >
+              your ultimate solution for seamless contact management! Our
+              platform is designed to make managing your contacts easier and
+              more efficient than ever before.
+            </p>
+            <a
+              th:href="@{'/login'}"
+              class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium border border-gray-300 rounded-lg text-center bg-primary-700 hover:bg-blue-800 hover:text-white ease-in-out duration-500 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900"
+            >
+              Get started
+              <svg
+                class="w-5 h-5 ml-2 -mr-1"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </a>
+          </div>
+          <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
+            <img
+              src="https://static.vecteezy.com/system/resources/previews/019/153/021/non_2x/3d-minimal-incoming-call-blank-incoming-call-screen-mockup-outgoing-call-template-hand-holding-a-smartphone-with-an-incoming-call-3d-rendering-illustration-free-png.png"
+              alt="mockup"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!--Features component -->
+
+      <section class="bg-white dark:bg-gray-900">
+        <div class="container px-6 py-10 mx-auto">
+          <h1
+            class="text-3xl text-center font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white"
+          >
+            explore our <br />
+            awesome
+            <span class="underline decoration-blue-500">Features</span>
+          </h1>
+
+          <p class="mt-4 text-center text-gray-500 xl:mt-6 dark:text-gray-300">
+            Protect your data with our robust authentication system, ensuring
+            that only you have access to your contacts.
+          </p>
+
+          <div
+            class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3"
+          >
+            <div
+              class="p-8 space-y-3 border-2 border-blue-400 dark:border-blue-300 rounded-xl"
+            >
+              <span class="inline-block text-blue-500 dark:text-blue-400">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-8 h-8"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"
+                  />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"
+                  />
+                </svg>
+              </span>
+
+              <h1
+                class="text-2xl font-semibold text-gray-700 capitalize dark:text-white"
+              >
+                Secure Login & Signup
+              </h1>
+
+              <p class="text-gray-500 dark:text-gray-300">
+                Protect your data with our robust authentication system,
+                ensuring that only you have access to your contacts.
+              </p>
+
+              <a th:href="@{'/login'}"
+                ><i
+                  class="fa-solid fa-circle-right p-2 mt-2 text-xl bg-blue-600 text-white rounded-full"
+                ></i
+              ></a>
+            </div>
+
+            <div
+              class="p-8 space-y-3 border-2 border-blue-400 dark:border-blue-300 rounded-xl"
+            >
+              <span class="inline-block text-blue-500 dark:text-blue-400">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-8 h-8"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"
+                  />
+                </svg>
+              </span>
+
+              <h1
+                class="text-2xl font-semibold text-gray-700 capitalize dark:text-white"
+              >
+                Add Contacts
+              </h1>
+
+              <p class="text-gray-500 dark:text-gray-300">
+                Easily add new contacts with comprehensive details including
+                name, image, and address.
+              </p>
+
+              <a th:href="@{'/login'}"
+                ><i
+                  class="fa-solid fa-circle-right p-2 mt-2 text-xl bg-blue-600 text-white rounded-full"
+                ></i
+              ></a>
+            </div>
+            <div
+              class="p-8 space-y-3 border-2 border-blue-400 dark:border-blue-300 rounded-xl"
+            >
+              <span class="inline-block text-blue-500 dark:text-blue-400">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-8 h-8"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"
+                  />
+                </svg>
+              </span>
+
+              <h1
+                class="text-2xl font-semibold text-gray-700 capitalize dark:text-white"
+              >
+                Edit Contacts
+              </h1>
+
+              <p class="text-gray-500 dark:text-gray-300">
+                Update contact information effortlessly to keep everything
+                current.
+              </p>
+
+              <a th:href="@{'/login'}"
+                ><i
+                  class="fa-solid fa-circle-right p-2 mt-2 text-xl bg-blue-600 text-white rounded-full"
+                ></i
+              ></a>
+            </div>
+
+            <div
+              class="p-8 space-y-3 border-2 border-blue-400 dark:border-blue-300 rounded-xl"
+            >
+              <span class="inline-block text-blue-500 dark:text-blue-400">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-8 h-8"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
+                  />
+                </svg>
+              </span>
+
+              <h1
+                class="text-2xl font-semibold text-gray-700 capitalize dark:text-white"
+              >
+                Delete Contacts
+              </h1>
+
+              <p class="text-gray-500 dark:text-gray-300">
+                Remove outdated or unwanted contacts with just a few clicks.
+              </p>
+
+              <a th:href="@{'/login'}"
+                ><i
+                  class="fa-solid fa-circle-right p-2 mt-2 text-xl bg-blue-600 text-white rounded-full"
+                ></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- counting section -->
+
+      <div class="h-screen dark:bg-gray-900">
+        <div class="bg-gray-50 dark:bg-gray-900 sm:pt-20">
+          <div class="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto text-center">
+              <h2
+                class="text-3xl font-extrabold leading-9 capitalize text-gray-900 dark:text-white sm:text-4xl sm:leading-10"
+              >
+                Trusted by users
+              </h2>
+              <p
+                class="mt-3 text-xl leading-7 text-gray-600 dark:text-gray-400 sm:mt-4"
+              >
+                Our intuitive interface is designed to provide a seamless user
+                experience. Navigate through the platform effortlessly and
+                manage your contacts with simplicity.
+              </p>
+            </div>
+          </div>
+          <div class="pb-12 mt-10 bg-gray-50 dark:bg-gray-900 sm:pb-16">
+            <div class="">
+              <div class="inset-0 h-1/2 bg-gray-50 dark:bg-gray-900"></div>
+              <div class="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
+                <div class="max-w-4xl mx-auto">
+                  <dl
+                    class="bg-white dark:bg-gray-800 rounded-lg shadow-lg sm:grid sm:grid-cols-3"
+                  >
+                    <div
+                      class="flex flex-col p-6 text-center border-b border-gray-100 dark:border-gray-700 sm:border-0 sm:border-r"
+                    >
+                      <dt
+                        class="order-2 mt-2 text-lg font-medium leading-6 text-gray-500 dark:text-gray-400"
+                        id="item-1"
+                      >
+                        Stars on FACEBOOK
+                      </dt>
+                      <dd
+                        class="order-1 text-5xl font-extrabold leading-none text-indigo-600 dark:text-indigo-100"
+                        aria-describedby="item-1"
+                        id="starsCount"
+                      >
+                        0
+                      </dd>
+                    </div>
+                    <div
+                      class="flex flex-col p-6 text-center border-t border-b border-gray-100 dark:border-gray-700 sm:border-0 sm:border-l sm:border-r"
+                    >
+                      <dt
+                        class="order-2 mt-2 text-lg font-medium leading-6 text-gray-500 dark:text-gray-400"
+                      >
+                        Users
+                      </dt>
+                      <dd
+                        class="order-1 text-5xl font-extrabold leading-none text-indigo-600 dark:text-indigo-100"
+                        id="downloadsCount"
+                      >
+                        0
+                      </dd>
+                    </div>
+                    <div
+                      class="flex flex-col p-6 text-center border-t border-gray-100 dark:border-gray-700 sm:border-0 sm:border-l"
+                    >
+                      <dt
+                        class="order-2 mt-2 text-lg font-medium leading-6 text-gray-500 dark:text-gray-400"
+                      >
+                        Sponsors
+                      </dt>
+                      <dd
+                        class="order-1 text-5xl font-extrabold leading-none text-indigo-600 dark:text-indigo-100"
+                        id="sponsorsCount"
+                      >
+                        0
+                      </dd>
+                    </div>
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        const targets = [
+          {
+            element: document.getElementById("starsCount"),
+            count: 4670,
+            suffix: "+",
+          },
+          {
+            element: document.getElementById("downloadsCount"),
+            count: 80000,
+            suffix: "+",
+          },
+          {
+            element: document.getElementById("sponsorsCount"),
+            count: 100,
+            suffix: "+",
+          },
+        ];
+
+        // Find the maximum count among all targets
+        const maxCount = Math.max(...targets.map((target) => target.count));
+
+        // Function to animate count-up effect
+        function animateCountUp(target, duration) {
+          let currentCount = 0;
+          const increment = Math.ceil(target.count / (duration / 10));
+
+          const interval = setInterval(() => {
+            currentCount += increment;
+            if (currentCount >= target.count) {
+              clearInterval(interval);
+              currentCount = target.count;
+              target.element.textContent = currentCount + target.suffix;
+            } else {
+              target.element.textContent = currentCount;
+            }
+          }, 10);
+        }
+
+        // Animate count-up for each target with adjusted duration
+        targets.forEach((target) => {
+          animateCountUp(target, maxCount / 100); // Adjust duration based on max count
+        });
+      </script>
+
+      <!-- customer review section -->
+
+      <div
+        class="mb-8 text-gray-600 dark:text-gray-300 dark:bg-gray-900"
+        id="reviews"
+      >
+        <div class="max-w-7xl mx-auto px-6 md:px-12 xl:px-6 ">
+          <div class="mb-10 space-y-4 px-6 md:px-0 ">
+            <h2
+              class="text-center pt-10 text-2xl font-bold text-gray-800 dark:text-white md:text-4xl"
+            >
+              Here is My Some Fans!
+            </h2>
+          </div>
+
+          <div class="md:columns-2 lg:columns-3 gap-8 space-y-8">
+            <div
+              class="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none"
+            >
+              <div class="flex gap-4">
+                <img
+                  class="w-12 h-12 rounded-full"
+                  src="https://media.licdn.com/dms/image/D5603AQGQFPvWlUmToQ/profile-displayphoto-shrink_400_400/0/1685172224225?e=2147483647&v=beta&t=0TnBZJc_gfVwn1O9Xc13EHSFvuSHY3Yu0PsOoeDYjVI"
+                  alt="user avatar"
+                  width="400"
+                  height="400"
+                  loading="lazy"
+                />
+                <div>
+                  <h6 class="text-lg font-medium text-gray-700 dark:text-white">
+                    Sannu Kumar Ojha
+                  </h6>
+                  <p class="text-sm text-gray-500 dark:text-gray-300">
+                    Motihari ,Bihar,India
+                  </p>
+                </div>
+              </div>
+              <p class="mt-10">
+                "Smart Contact Manager has transformed the way I manage my
+                contacts. The secure login gives me peace of mind, and the
+                interface is so intuitive. Adding and updating contacts is a
+                breeze!"
+              </p>
+            </div>
+
+            <div
+              class="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none"
+            >
+              <div class="flex gap-4">
+                <img
+                  class="w-12 h-12 rounded-full"
+                  src="https://media.licdn.com/dms/image/D4D03AQFo3NlKPYtlsQ/profile-displayphoto-shrink_200_200/0/1713477601142?e=2147483647&v=beta&t=ba6Y0Mx5-YrXaIzsXywQrrHSi2ZtAg4c32XhC9S4JrM"
+                  alt="user avatar"
+                  width="200"
+                  height="200"
+                  loading="lazy"
+                />
+                <div>
+                  <h6 class="text-lg font-medium text-gray-700 dark:text-white">
+                    Ajay Kumar Ojha
+                  </h6>
+                  <p class="text-sm text-gray-500 dark:text-gray-300">
+                    Motihari ,India
+                  </p>
+                </div>
+              </div>
+              <p class="mt-8">
+                "Smart Contact Manager has transformed the way I manage my
+                contacts. The secure login gives me peace of mind, and the
+                interface is so intuitive. Adding and updating contacts is a
+                breeze!"
+              </p>
+            </div>
+
+            <div
+              class="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none"
+            >
+              <div class="flex gap-4">
+                <img
+                  class="w-12 h-12 rounded-full"
+                  src="https://media.licdn.com/dms/image/D4D03AQFo3NlKPYtlsQ/profile-displayphoto-shrink_200_200/0/1713477601142?e=2147483647&v=beta&t=ba6Y0Mx5-YrXaIzsXywQrrHSi2ZtAg4c32XhC9S4JrM"
+                  alt="user avatar"
+                  width="200"
+                  height="200"
+                  loading="lazy"
+                />
+                <div>
+                  <h6 class="text-lg font-medium text-gray-700 dark:text-white">
+                    Ajay Kumar Ojha
+                  </h6>
+                  <p class="text-sm text-gray-500 dark:text-gray-300">
+                    Developer
+                  </p>
+                </div>
+              </div>
+              <p class="mt-8">
+               "Smart Contact Manager has transformed the way I manage my
+                contacts. The secure login gives me peace of mind, and the
+                interface is so intuitive. Adding and updating contacts is a
+                breeze!"
+              </p>
+            </div>
+
+            <div
+              class="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none"
+            >
+              <div class="flex gap-4">
+                <img
+                  class="w-12 h-12 rounded-full"
+                  src="https://media.licdn.com/dms/image/D4D03AQFo3NlKPYtlsQ/profile-displayphoto-shrink_200_200/0/1713477601142?e=2147483647&v=beta&t=ba6Y0Mx5-YrXaIzsXywQrrHSi2ZtAg4c32XhC9S4JrM"
+                  alt="user avatar"
+                  width="200"
+                  height="200"
+                  loading="lazy"
+                />
+                <div>
+                  <h6 class="text-lg font-medium text-gray-700 dark:text-white">
+                    Ajay Kumar Ojha
+                  </h6>
+                  <p class="text-sm text-gray-500 dark:text-gray-300">
+                   SCM Developer
+                  </p>
+                </div>
+              </div>
+              <p class="mt-8">
+               "Smart Contact Manager has transformed the way I manage my
+                contacts. The secure login gives me peace of mind, and the
+                interface is so intuitive. Adding and updating contacts is a
+                breeze!"
+              </p>
+            </div>
+
+            <div
+              class="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none"
+            >
+              <div class="flex gap-4">
+                <img
+                  class="w-12 h-12 rounded-full"
+                  src="https://media.licdn.com/dms/image/D4D03AQFo3NlKPYtlsQ/profile-displayphoto-shrink_200_200/0/1713477601142?e=2147483647&v=beta&t=ba6Y0Mx5-YrXaIzsXywQrrHSi2ZtAg4c32XhC9S4JrM"
+                  alt="user avatar"
+                  width="200"
+                  height="200"
+                  loading="lazy"
+                />
+                <div>
+                  <h6 class="text-lg font-medium text-gray-700 dark:text-white">
+                    Ajay Kumar Ojha
+                  </h6>
+                  <p class="text-sm text-gray-500 dark:text-gray-300">
+                    Manager
+                  </p>
+                </div>
+              </div>
+              <p class="mt-8">
+                "Smart Contact Manager has transformed the way I manage my
+                contacts. The secure login gives me peace of mind, and the
+                interface is so intuitive. Adding and updating contacts is a
+                breeze!"
+              </p>
+            </div>
+
+            <div
+              class="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none"
+            >
+              <div class="flex gap-4">
+                <img
+                  class="w-12 h-12 rounded-full"
+                  src="https://media.licdn.com/dms/image/D4D03AQFo3NlKPYtlsQ/profile-displayphoto-shrink_200_200/0/1713477601142?e=2147483647&v=beta&t=ba6Y0Mx5-YrXaIzsXywQrrHSi2ZtAg4c32XhC9S4JrM"
+                  alt="user avatar"
+                  width="400"
+                  height="400"
+                  loading="lazy"
+                />
+                <div>
+                  <h6 class="text-lg font-medium text-gray-700 dark:text-white">
+                    Ajay Kumar Ojha
+                  </h6>
+                  <p class="text-sm text-gray-500 dark:text-gray-300">
+                    Mobile dev
+                  </p>
+                </div>
+              </div>
+              <p class="mt-8">
+               "Smart Contact Manager has transformed the way I manage my
+                contacts. The secure login gives me peace of mind, and the
+                interface is so intuitive. Adding and updating contacts is a
+                breeze!"
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- footer start -->
+
+      <footer class="bg-white dark:bg-gray-900">
+        <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+          <div class="md:flex md:justify-between">
+            <div class="mb-6 md:mb-0">
+              <a href="https://flowbite.com/" class="flex items-center">
+                <img
+                  src="https://flowbite.com/docs/images/logo.svg"
+                  class="h-8 me-3"
+                  alt="FlowBite Logo"
+                />
+                <span
+                  class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+                  >Flowbite</span
+                >
+              </a>
+            </div>
+            <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+              <div>
+                <h2
+                  class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
+                >
+                  Resources
+                </h2>
+                <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                  <li class="mb-4">
+                    <a href="https://flowbite.com/" class="hover:underline"
+                      >Flowbite</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://tailwindcss.com/" class="hover:underline"
+                      >Tailwind CSS</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h2
+                  class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
+                >
+                  Follow us
+                </h2>
+                <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                  <li class="mb-4">
+                    <a
+                      href="https://github.com/themesberg/flowbite"
+                      class="hover:underline"
+                      >Github</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://discord.gg/4eeurUVvTy"
+                      class="hover:underline"
+                      >Discord</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h2
+                  class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
+                >
+                  Legal
+                </h2>
+                <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                  <li class="mb-4">
+                    <a href="#" class="hover:underline">Privacy Policy</a>
+                  </li>
+                  <li>
+                    <a href="#" class="hover:underline"
+                      >Terms &amp; Conditions</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <hr
+            class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8"
+          />
+          <div class="sm:flex sm:items-center sm:justify-between">
+            <span
+              class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
+              >© 2023
+              <a href="https://flowbite.com/" class="hover:underline"
+                >Flowbite™</a
+              >. All Rights Reserved.
+            </span>
+            <div class="flex mt-4 sm:justify-center sm:mt-0">
+              <a
+                href="#"
+                class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+              >
+                <svg
+                  class="w-4 h-4"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 8 19"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span class="sr-only">Facebook page</span>
+              </a>
+              <a
+                href="#"
+                class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
+              >
+                <svg
+                  class="w-4 h-4"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 21 16"
+                >
+                  <path
+                    d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z"
+                  />
+                </svg>
+                <span class="sr-only">Discord community</span>
+              </a>
+              <a
+                href="#"
+                class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
+              >
+                <svg
+                  class="w-4 h-4"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 20 17"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span class="sr-only">Twitter page</span>
+              </a>
+              <a
+                href="#"
+                class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
+              >
+                <svg
+                  class="w-4 h-4"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span class="sr-only">GitHub account</span>
+              </a>
+              <a
+                href="#"
+                class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
+              >
+                <svg
+                  class="w-4 h-4"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 0a10 10 0 1 0 10 10A10.009 10.009 0 0 0 10 0Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.094 20.094 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM8 1.707a8.821 8.821 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.758 45.758 0 0 0 8 1.707ZM1.642 8.262a8.57 8.57 0 0 1 4.73-5.981A53.998 53.998 0 0 1 9.54 7.222a32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.64 31.64 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM10 18.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 13.113 11a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span class="sr-only">Dribbble account</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </section>
+  </body>
+</html>
